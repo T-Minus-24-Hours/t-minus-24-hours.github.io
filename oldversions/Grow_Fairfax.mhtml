@@ -1,0 +1,60 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://127.0.0.1:5500/index.html
+Subject: Grow Fairfax
+Date: Sat, 14 Aug 2021 19:06:46 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--pYfXEXa9srk5drw6g0r26YlHIHnkeaqwW9qUrp3R2f----"
+
+
+------MultipartBoundary--pYfXEXa9srk5drw6g0r26YlHIHnkeaqwW9qUrp3R2f----
+Content-Type: text/html
+Content-ID: <frame-84F5A7ED4E32ACD225B931B5FC465F7D@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.1:5500/index.html
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/=
+css" href=3D"cid:css-328f6dbe-3d2a-42aa-958d-fa90073d37e0@mhtml.blink" />
+   =20
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>Grow Fairfax</title>
+    <link rel=3D"shortcut icon" type=3D"image/png" href=3D"http://127.0.0.1=
+:5500/images/favicon.png">
+</head>
+
+<body>
+    <nav id=3D"navbar">
+        <ul>
+            <li><a href=3D"http://127.0.0.1:5500/index.html">Home</a></li>
+            <li><a href=3D"http://127.0.0.1:5500/index.html">About Us</a></=
+li>
+        </ul>
+    </nav>
+    <h2></h2>
+    <h2 class=3D"title">Grow Fairfax</h2>
+<!-- Code injected by live-server -->
+
+</body></html>
+------MultipartBoundary--pYfXEXa9srk5drw6g0r26YlHIHnkeaqwW9qUrp3R2f----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-328f6dbe-3d2a-42aa-958d-fa90073d37e0@mhtml.blink
+
+@charset "utf-8";
+
+#navbar { position: fixed; top: 0px; left: 0px; width: 100%; background-col=
+or: rgb(94, 184, 56); }
+
+nav ul { margin: 0px; padding: 15px 0px 15px 30px; }
+
+nav li { display: inline; margin-right: 45px; color: white; font-weight: 70=
+0; }
+
+a { text-decoration: none; color: inherit; }
+
+.title { margin-top: 65px; text-align: center; font-size: 50px; }
+------MultipartBoundary--pYfXEXa9srk5drw6g0r26YlHIHnkeaqwW9qUrp3R2f------
