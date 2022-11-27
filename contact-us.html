@@ -2,8 +2,7 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block navbar %}
-<div class="container">
-  <header class="d-flex justify-content-center py-3">
+
     <ul class="nav nav-pills">
       <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
       <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
@@ -11,10 +10,26 @@
       <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
       <li class="nav-item"><a href="updates.html" class="nav-link">Updates</a></li>
     </ul>
-  </header>
-</div>
+
 {% endblock %}
 
 {% block content %}
+<center>We apologize for the inconvenience, but currently this page doesn't function. Thank you for understanding.</center>
+
 <h1 class="display-5" style="text-align: center;">Contact Us</h1>
+<form method="post" action="sendmail.php" class="container" style="padding: 10px">
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" disabled>
+</div>
+<div class="mb-3">
+  <label for="subjectLine" class="form-label">Subject</label>
+  <input type="text" class="form-control" id="subjectLine" placeholder="My Feedback" name="subject" disabled>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" disabled></textarea>
+</div>
+<input type="submit" class="btn btn-primary btn-lg px-4 gap-3" value="Send!" disabled>
+</form>
 {% endblock %}

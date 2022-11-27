@@ -1,34 +1,35 @@
 {% extends "_template.html" %}
 {% block title %}About Us{% endblock %}
 {% block navbar %}
-    <div class="container">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
+     <ul class="nav nav-pills">
         <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="about-us.html" class="nav-link active">About Us</a></li>
         <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
         <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
         <li class="nav-item"><a href="updates.html" class="nav-link">Updates</a></li>
       </ul>
-    </header>
-  </div>
+    
 {% endblock %}
 
 {% block content %}
+<div>
   <h1 class="display-5" style="text-align: center;">Meet our Team</h1>
 
   <div class="container">
     <div class="row row-cols-3">
       <div class="col">
         <div class="card container" style="width: 25rem; padding-top: 36px">
-            <img src="athmik.png" class="card-img-top" alt="...">
+            <img src="athmik-a.jpg" class="card-img-top" alt="..." id="athmik-picture">
             <div class="card-body">
               <h5 class="card-title">Athmik Jeyasekar</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Founder, Chairman, and All-around Tyrant</h6>
-              <p class="card-text">Athmik Jeyasekar is 14 years old, and is the founder and Chairman of Grow Fairfax.
+              <h6 class="card-subtitle mb-2 text-muted">Founder, Chairman, and <b class="blink_text">All-around Tyrant</b></h6>
+              <p class="card-text">Athmik Jeyasekar is 15 years old, and is the founder and Chairman of Grow Fairfax.
                 He is 70 feet tall, and needs height reduction surgery. In his spare time, he loves (he really, really
                 loves) to disparage people's personal hobbies; that's my take, at least.</p>
-              <a href="#" class="btn btn-primary">See who I am</a>
+               <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  See who I am
+                </button>
             </div>
           </div>
         </div>
@@ -38,7 +39,7 @@
             <div class="card-body">
               <h5 class="card-title">James Kim</h5>
               <h6 class="card-subtitle mb-2 text-muted">Cofounder and Vice Secretary</h6>
-              <p class="card-text">James Kim is 14 years old. James is <em>so</em> much nicer than Athmik, that's for sure.
+              <p class="card-text">James Kim is 15 years old. James is <em>so</em> much nicer than Athmik, that's for sure.
               That's not saying much (I mean, come on, the fact that I'm so against Athmik is a clear red flag), so I'll
               unambigously say that James Kim is legitimately an amazing human being and the best person to ever exist.</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -52,7 +53,7 @@
             <div class="card-body">
               <h5 class="card-title">Liann Moreschi</h5>
               <h6 class="card-subtitle mb-2 text-muted">Cofounder and Treasurer</h6>
-              <p class="card-text">Liann Moreschi is a person I don't know. She's nice. That's nice. Everything's nice. Except Athmik.
+              <p class="card-text">Liann Moreschi is 15 and a person I don't know. She's nice. That's nice. Everything's nice. Except Athmik.
                 You don't know how not-nice he is. If you lined up all the people in the world by how nice they were, you'd refuse to
                 order him. (I know this isn't a biography, but at least I'm not like James who used <em>Lorem Ipsum</em> as filler text.)
               </p>
@@ -60,36 +61,41 @@
             </div>
           </div>
         </div>
-        
+       <br> 
       <div class="col">
-        <div class="card container" style="width: 25rem; background-color: gray; padding-top: 36px;">
-            <img src="pradhyum.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title" style="color: red;">Pradhyum Rajasekar</h5>
-              <h6 class="card-subtitle mb-2" style="color: #d1d7e1">Web Developer and Supreme Leader</h6>
-              <p class="card-text" style="color: #09f675;">Although I joined later than the others, I rose to the top using my expert expertise. I am the <em>de facto</em>
-			  mastermind of this organization. How did that come about? Obviously, a mean leader (cough, cough, Athmik) is not a viable one.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-      <div class="col" >
         <div class="card container" style="width: 25rem; padding-top: 36px;">
-            <img src="nate.png" class="card-img-top" alt="...">
+            <img src="pradhyum_actual.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Nathan Deller Goss</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Cofounder and Head of Public Relations</h6>
-              <p class="card-text">No idea who this is. But regardless, I'm sure he would be nicer than Athmik. If the robots took over and they were trying to make a perfect
-                society, Athmik would be the person they would gleefully chase and attack first. I hope you know more about Ath- wait I mean Nathen Deller Goss, whoever that
-                is.
+              <h5 class="card-title">Pradhyum Rajasekar</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Web Developer and <b id="supreme-leader">Supreme Leader</b></h6>
+              <p class="card-text">I'm <b class="muted">Web Developer</b> Pradhyum Rajasekar, and I'm 15 years old. I hope that I will never be confused with Athmik because that would
+                be the day my world would turn around. That would be the world would end for me, for to be compared with Athmik is not on par to being compared with
+                that denizen of the underworld, Cthulhu, but rather an chthonic creature that even Lovecraft's crazed imagination could not dream of.
               </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
-
-        
     </div>
   </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">An Essay on Myself</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>I know that I am mean. I make it so. The opinions of everyone about me are justified. I completely understand
+            that the webmaster is my master, and, just to make it clear, these words are written by myself and only myself.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes, I agree</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
