@@ -11,7 +11,7 @@ env = Environment(
 )
 
 files = 'about-us.html contact-us.html donate.html index.html updates.html new.html'.split()
-static = 'pradhyum.jpg rand.jfif templogo.png weblogo.png favicon.png athmik.png athmik-a.jpg james.png liann.png pradhyum_actual.jpg athmik-actual.JPG favicon.png sendmail.php features.css style.css'.split()
+static = 'pradhyum.jpg rand.jfif templogo.png weblogo.png favicon.png athmik.png athmik-a.jpg james.jpg liann.png pradhyum_actual.jpg athmik-actual.JPG favicon.png sendmail.php features.css style.css'.split()
 output_dir = Path('build')
 if not output_dir.exists():
     output_dir.mkdir()
