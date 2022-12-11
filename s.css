@@ -84,7 +84,11 @@
 }
 
 .nav-link {
-  color: #1B1B35;
+  color: #FFFF;
+}
+
+.nav-link:hover {
+  color: #97CEB1;
 }
 
 .nav-pills .nav-link.active {
@@ -95,6 +99,10 @@
 .scene {
   color: #1B1B35;
   background-color: #969696;
+}
+
+footer {
+  color: #FFF
 }
 
 body {
@@ -108,4 +116,16 @@ body {
 
 h1 {
   padding: 40px;
+}
+
+.person {
+  padding: 0px;
+}
+
+.icon-link {
+  color: #C9FFE3
+}
+
+.icon-link:hover {
+  color: #97CEB1
 }
