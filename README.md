@@ -7,6 +7,8 @@ Available at [http://t-24hrs.ml/](http://t-24hrs.ml)
 Setup:
  1. [Install Python](https://www.python.org/downloads/)
  2. Open terminal and run `python3 -m pip install Jinja2` (on Windows, you might have to replace `python3` with `py`)
+ 3. Locally clone this repository (`git clone git@github.com:T-Minus-24-Hours/Main-Website.git`, if you use terminal. You might need to set up an SSH key though.)
+ 4. `cd` into the folder using terminal
 
 Jinja is a templating engine. I've conveniently wrapped all necessary code into `build-script.py`, so when you want to see what the
 website would look like with your changes, just run `python3 build-script.py -o` (this opens a new tab; if you don't want that to
@@ -20,3 +22,5 @@ file to be copied over. If you add a new image/css/any other static file that do
 One last note: if you want to change the template (that is, the navbar styling, the footer, anything that is common to every page), you'll
 need to edit `_template.html`. If you want to actually take advantage of the templating system, [RTFD](https://jinja.palletsprojects.com/en/3.1.x/)
 (honestly, I need to do that as well).
+
+**I know that the process is complicated. I literally made this up on the spot. If you know any tools that make this easier to do, please open an issue.**
