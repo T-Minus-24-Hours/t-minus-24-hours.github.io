@@ -26,8 +26,8 @@
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
-        <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-        <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+        <li class="nav-item disabled "><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+        <li class="nav-item disabled "><a href="donate.html" class="nav-link">Donate</a></li>
         <li class="nav-item"><a href="updates.html" class="nav-link active">Updates</a></li>
       </ul>
 
@@ -85,5 +85,16 @@
         </ul>
       </footer>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
+  crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $(".disabled a").click(function() {
+          return false;
+        });
+      });
+    </script>
   </body>
 </html>

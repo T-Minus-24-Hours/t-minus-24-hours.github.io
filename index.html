@@ -26,8 +26,8 @@
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
-        <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-        <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+        <li class="nav-item disabled "><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+        <li class="nav-item disabled "><a href="donate.html" class="nav-link">Donate</a></li>
         <li class="nav-item"><a href="updates.html" class="nav-link">Updates</a></li>
       </ul>
 
@@ -58,8 +58,8 @@
     <h1 class="display-5 fw-bold">T-Minus 24 Hours</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">
-        We want to drive this generation to solving the next generation's medical problems. And so on and so forth. T-24 is a groundbreaking initiative to
-        push today's youth into tomorrow's medical field.
+        T-Minus 24 Hours is a student run non-profit group created to raise awareness for diseases and disorders that are often under researched and overlooked.
+        Our organization aims to engage young minds through innovative problem solving and exploration.
 	    </p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <a href="about-us.html"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Meet Us</button></a>
@@ -69,7 +69,7 @@
   </div>
 
 
-  <div class="container px-4 py-5" id="featured-3">
+  <!-- <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">Our Goals</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="feature col">
@@ -109,7 +109,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
 
   </div>
   <div class="container">
@@ -129,5 +129,16 @@
         </ul>
       </footer>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
+  crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $(".disabled a").click(function() {
+          return false;
+        });
+      });
+    </script>
   </body>
 </html>
