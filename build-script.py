@@ -55,9 +55,9 @@ for filename in static:
 for from_, to_ in manual_copy.items():
     try:
         copy(from_, output_dir / to_)
-        SUCCESS(f'Copy success at {filename}')
+        SUCCESS(f'Manual copy success at {from_}')
     except Exception as e:
-        FAILURE(f'Manual copy failure at {filename}')
+        FAILURE(f'Manual copy failure at {from_}')
         error_count += 1
 
 
