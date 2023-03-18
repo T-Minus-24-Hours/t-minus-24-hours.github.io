@@ -1,3 +1,4 @@
 bootstrap*
 oldversions*
 build/*
+node_modules/

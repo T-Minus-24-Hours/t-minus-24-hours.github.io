@@ -1,30 +1,75 @@
 #!/mnt/c/WINDOWS/py.exe
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+FAILURE = lambda s: print(f'\033[0;31m{s}\033[0m')
+SUCCESS = lambda s: print(f'\033[0;32m{s}\033[0m')
+
+try:
+    from jinja2 import Environment, FileSystemLoader, select_autoescape
+except ImportError:
+    FAILURE("Jinja is not installed.")
+    exit(1)
 from pathlib import Path
-from shutil import copy
+from shutil import copy, which
 import webbrowser as wb
-import os
+import os     # subprocess doesn't work on my system for some reason
 import sys
+
+if not which("sass"):
+    FAILURE('Sass is not installed. See https://sass-lang.com/install for more details.')
 
 env = Environment(
         loader = FileSystemLoader('.'),
         autoescape = select_autoescape()
 )
 
-files = 'about-us.html contact-us.html donate.html index.html updates.html new.html'.split()
-static = 'pradhyum.jpg rand.jfif templogo.png weblogo.png favicon.png athmik.png athmik-a.jpg james.jpg liann.jpg pradhyum_actual.jpg \
-athmik-actual.JPG favicon.png sendmail.php features.css s.css'.split()
+files = 'about-us.html contact-us.html donate.html index.html updates.html'.split()
+static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg'.split()
+stylesheet = 'style.scss'    # Currently only using a unified stylesheet
+manual_copy = {
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js': 'bootstrap.bundle.min.js'
+}
+
 output_dir = Path('build')
 if not output_dir.exists():
     output_dir.mkdir()
 
+error_count = 0
+
 for filename in files:
-    with open(output_dir / filename, 'w') as output:
-        output.write(env.get_template(filename).render())
+    try:
+        with open(output_dir / filename, 'w') as output:
+            output.write(env.get_template(filename).render())
+        SUCCESS(f'Template success at {filename}')
+    except Exception as e:
+        FAILURE(f'Template failure at {filename}')
+        error_count += 1
 
 for filename in static:
-    copy(filename, output_dir / filename)
+    try:
+        copy(filename, output_dir / filename)
+        SUCCESS(f'Copy success at {filename}')
+    except Exception as e:
+        FAILURE(f'Copy failure at {filename}')
+        error_count += 1
 
-print('\033[0;32mSuccess!\033[0m')
+for from_, to_ in manual_copy.items():
+    try:
+        copy(from_, output_dir / to_)
+        SUCCESS(f'Copy success at {filename}')
+    except Exception as e:
+        FAILURE(f'Manual copy failure at {filename}')
+        error_count += 1
+
+
+print('Compiling stylesheets...', end='\r')
+error_count += bool(os.system(f'sass {stylesheet} build/styles.css'))
+SUCCESS("Stylesheets compiled        ")
+
+print()
+if error_count == 0:
+    SUCCESS('Success!')
+else:
+    FAILURE(f'{error_count} mistake(s) recorded. Don\'t trust the build files.')
+
 if sys.argv[1:] == ['-o']:
     wb.open('file://' + os.path.realpath('build/index.html'))
