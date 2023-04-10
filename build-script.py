@@ -1,5 +1,20 @@
 #!/mnt/c/WINDOWS/py.exe
 
+###############################################################
+### PARAMETERS ################################################
+###############################################################
+
+files = 'about-us.html contact-us.html donate.html index.html updates.html'.split()
+static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg blank-profile.png'.split()
+stylesheet = 'style.scss'    # Currently only using a unified stylesheet
+manual_copy = {
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js': 'bootstrap.bundle.min.js'
+}
+
+###############################################################
+### LOGIC #####################################################
+###############################################################
+
 FAILURE = lambda s: print(f'\033[0;31m{s}\033[0m')
 SUCCESS = lambda s: print(f'\033[0;32m{s}\033[0m')
 
@@ -21,13 +36,6 @@ env = Environment(
         loader = FileSystemLoader('.'),
         autoescape = select_autoescape()
 )
-
-files = 'about-us.html contact-us.html donate.html index.html updates.html'.split()
-static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg'.split()
-stylesheet = 'style.scss'    # Currently only using a unified stylesheet
-manual_copy = {
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js': 'bootstrap.bundle.min.js'
-}
 
 output_dir = Path('build')
 if not output_dir.exists():
