@@ -6,7 +6,7 @@
 
 files = 'about-us.html contact-us.html donate.html index.html updates.html'.split()
 static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg \
-blank-profile.png quill2.jpg kennen.jpg katherine.jpg arnav.jpg'.split()
+blank-profile.png quill2.jpg kennen.jpg katherine.jpg arnav.jpg will.jpg'.split()
 stylesheet = 'style.scss'    # Currently only using a unified stylesheet
 manual_copy = {
     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js': 'bootstrap.bundle.min.js'
@@ -18,6 +18,7 @@ manual_copy = {
 
 FAILURE = lambda s: print(f'\033[0;31m{s}\033[0m')
 SUCCESS = lambda s: print(f'\033[0;32m{s}\033[0m')
+WARNING = lambda s: print(f'\033[0;33m{s}\033[0m')
 
 try:
     from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -71,8 +72,12 @@ for from_, to_ in manual_copy.items():
 
 if '-ns' not in sys.argv:
     print('Compiling stylesheets...', end='\r')
-    error_count += bool(os.system(f'sass {stylesheet} build/styles.css'))
-    SUCCESS("Stylesheets compiled        ")
+    r = bool(os.system(f'sass {stylesheet} build/styles.css'))
+    error_count += r
+    if r: FAILURE("Error during stylesheets compilation")
+    else: SUCCESS("Stylesheets compiled        ")
+else:
+    WARNING("Stylesheets not updated")
 
 print()
 if error_count == 0:
