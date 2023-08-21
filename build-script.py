@@ -5,7 +5,7 @@
 ###############################################################
 
 files = 'about-us.html contact-us.html donate.html index.html updates.html'.split()
-static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg blank-profile.png'.split()
+static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg blank-profile.png quill2.jpg kennen.jpg'.split()
 stylesheet = 'style.scss'    # Currently only using a unified stylesheet
 manual_copy = {
     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js': 'bootstrap.bundle.min.js'
@@ -68,10 +68,10 @@ for from_, to_ in manual_copy.items():
         FAILURE(f'Manual copy failure at {from_}')
         error_count += 1
 
-
-print('Compiling stylesheets...', end='\r')
-error_count += bool(os.system(f'sass {stylesheet} build/styles.css'))
-SUCCESS("Stylesheets compiled        ")
+if '-ns' not in sys.argv:
+    print('Compiling stylesheets...', end='\r')
+    error_count += bool(os.system(f'sass {stylesheet} build/styles.css'))
+    SUCCESS("Stylesheets compiled        ")
 
 print()
 if error_count == 0:
@@ -79,5 +79,6 @@ if error_count == 0:
 else:
     FAILURE(f'{error_count} mistake(s) recorded. Don\'t trust the build files.')
 
-if sys.argv[1:] == ['-o']:
+if '-o' in sys.argv:
     wb.open('file://' + os.path.realpath('build/index.html'))
+    print('Opened index.html')
