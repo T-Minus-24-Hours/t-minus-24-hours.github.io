@@ -5,7 +5,8 @@
 ###############################################################
 
 files = 'about-us.html contact-us.html donate.html index.html updates.html'.split()
-static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg blank-profile.png quill2.jpg kennen.jpg'.split()
+static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg \
+blank-profile.png quill2.jpg kennen.jpg katherine.jpg arnav.jpg'.split()
 stylesheet = 'style.scss'    # Currently only using a unified stylesheet
 manual_copy = {
     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js': 'bootstrap.bundle.min.js'
