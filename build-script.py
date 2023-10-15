@@ -4,7 +4,7 @@
 ### PARAMETERS ################################################
 ###############################################################
 
-files = 'about-us.html contact-us.html donate.html index.html updates.html'.split()
+files = 'about-us.html donate.html index.html events.html join-our-team.html'.split()
 static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg \
 blank-profile.png quill2.jpg kennen.jpg katherine.jpg arnav.jpg will.jpg ryan.jpg Indra.jpg'.split()
 stylesheet = 'style.scss'    # Currently only using a unified stylesheet
