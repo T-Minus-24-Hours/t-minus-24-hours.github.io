@@ -1,31 +1,69 @@
 {% extends "_template.html" %}
 {% block title %}Events{% endblock %}
 {% block navbar %}
-     <ul class="nav nav-pills">
-        <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
-        <li class="nav-item disabled "><a href="donate.html" class="nav-link">Donate</a></li>
-        <li class="nav-item disabled"><a href="events.html" class="nav-link active">Events</a></li>
-        <li class="nav-item"><a href="join-our-team.html" class="nav-link">Join Our Team</a></li>
-      </ul>
+<ul class="nav nav-pills">
+  <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+  <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+  <li class="nav-item disabled "><a href="donate.html" class="nav-link">Donate</a></li>
+  <li class="nav-item disabled"><a href="events.html" class="nav-link active">Events</a></li>
+  <li class="nav-item"><a href="join-our-team.html" class="nav-link">Join Our Team</a></li>
+</ul>
 {% endblock %}
 
 {% block content %}
 <div class="container">
-    <h1>Event Info</h1>
-    <p><b>The window to sign up for this event has ended. Please check back later or follow our Instagram account for future events.</b></p>
-    <p>Down syndrome is a common genetic condition that is estimated to affect over 400,000 people in the US alone. Often diagnosed at or before birth, Down syndrome is a lifelong condition that can affect appearance, physical and intellectual development, and susceptibility to other health conditions. In this competition, students will be presented with a scenario about someone living with Down syndrome. They will have 24 hours to research and come up with a creative, feasible solution to aid the person in their daily life. At the end of the 24 hours, the students will present their solution to a panel of judges for the chance to win up to $125.</p>
-    <ul>
-    <li> Teams of 1 through 4 will be given a scenario about someone living with Down Syndrome</li>
-   <li>They will have 24 hours to research possible treatment plans, technologies, and/or services that could help the individual</li>
-    <li>At the end of the 24 hours, teams will present their solution in a Google Meet call (any format is fine, though our recommendation is a slideshow presentation); they should be prepared to answer follow-up questions about their solution</li>
-        <li>Winners will be announced the day after presentations are given, and prize money will be given in the form of Amazon gift cards</li>
-   </ul>
-
-<p style="word-wrap: break-word;">Schedule: <a href="https://docs.google.com/document/d/17Ksat7lUOwSJBLqBz2_eHTv7TSW9gbmweNN1XhizI6U/edit?usp=sharing" target="_blank">https://docs.google.com/document/d/17Ksat7lUOwSJBLqBz2_eHTv7TSW9gbmweNN1XhizI6U/edit?usp=sharing</a></p>
+  <h3>List of Events</h3>
+  <p class="lead">Below, you can find a list of past and future events, as well as sign-ups for planned events.</p>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Macular Degeneration (TBD 2024)
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Our Macular Degeneration event is our next event. We encourage you to participate to test your skills at rapid
+          fire engineering in the competition that is T-24 Hours: Macular Degeneration.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Down Syndrome (Nov 2023)
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row align-items-start">
+            <div class="col">
+              Our Down Syndrome event featured Sarah, a 7 year old girl with Down Syndrome aiming to fit into larger
+              society. Our first event immediately attracted talanted participants, who created tools focusing on
+              specific issues Sarah faced, including a smart bandage and blood flow restriction therapy. Our
+              participants were not afraid of looking at out of the box solutions, and they definitely showed
+              understanding of our mission!
+              <div class="container-fluid pt-3">
+                <h5>Placings</h5>
+                <ol>
+                  <li>Stephen L & Chloe L</li>
+                  <li>Raahil M & Jacob G</li>
+                  <li>Enrui L & Wynn S</li>
+                </ol>
+              </div>
+            </div>
+            <div class="col">
+              <figure class="figure">
+                <img src="neck-brace.png" class="figure-img rounded float-start img-fluid" alt="..." />
+                <figcaption class="figure-caption">A 3d model of a redesigned neck brace</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<center>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdcsOrdjp3IPLTDNwaHMm6TmXmwKHiRyGb4ApcjXjFC6eQOvQ/viewform?embedded=true" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</center>
 {% endblock %}
