@@ -4,10 +4,13 @@
 ### PARAMETERS ################################################
 ###############################################################
 
+import os
+
 files = 'about-us.html donate.html index.html events.html join-our-team.html'.split()
-static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg \
-blank-profile.png quill2.jpg kennen.jpg katherine.jpg arnav.jpg will.jpg ryan.jpg Indra.jpg \
-founders.jpg shaheer.png lemuel.png sophia.png jooeun.png geoffrey.webp neck-brace.png'.split()
+static = [x for x in os.listdir('.') if x.split('.')[-1] in 'png jpg webp'.split()]
+#static = 'pradhyum.jpg weblogo.png favicon.png athmik-a.jpg james.jpg liann.jpg nick.jpg \
+#blank-profile.png quill2.jpg kennen.jpg katherine.jpg arnav.jpg will.jpg ryan.jpg Indra.jpg \
+#founders.jpg shaheer.png lemuel.png sophia.png jooeun.png geoffrey.webp neck-brace.png'.split()
 stylesheet = 'style.scss'    # Currently only using a unified stylesheet
 manual_copy = {
     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js': 'bootstrap.bundle.min.js'
